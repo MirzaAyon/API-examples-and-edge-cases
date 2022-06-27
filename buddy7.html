@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddy</title>
+</head>
+
+<body>
+    <div id="buddies">
+
+    </div>
+    <script>
+        const loadBuddies = () => {
+            fetch('https://randomuser.me/api/?results=5')
+                .then(res => res.json())
+                .then(data => displayBuddies(data))
+        }
+        loadBuddies(); //ekhn show hbe 
+        const displayBuddies = data => {
+            const buddies = data.results;
+            const buddiesDiv = document.getElementById('buddies');
+            for (const buddy of buddies) {
+                // console.log(buddy);
+                // console.log(buddy.name);
+                // console.log(buddy.name.first);
+                console.log(buddy.name.first, buddy.name.last);
+                const p = document.createElement('p');
+                p.innerText = buddy.email;
+                buddiesDiv.appendChild(p);
+                //email dekhsi porer file e num gula dekhbo
+            }
+        }
+
+    </script>
+</body>
+
+</html>

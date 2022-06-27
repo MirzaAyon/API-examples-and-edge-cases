@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanye West</title>
+</head>
+
+<body>
+    <h2>Kanye Quotes</h2>
+    <blockquote id="quote">
+
+    </blockquote>
+
+    <script>
+        const loadQuotes = () => {
+            fetch('https://api.kanye.rest/')
+                .then(res => res.json())
+                .then(data => console.log(data));
+        }
+
+        loadQuotes(); //call na korle data show hbe na
+    </script>
+</body>
+
+</html>
