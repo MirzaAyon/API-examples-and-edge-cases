@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countries</title>
+</head>
+
+<body>
+    <h1>Countries</h1>
+    <div id="countries">
+
+    </div>
+    <script>
+        const loadCountries = () => {
+            fetch('https://restcountries.com/v3.1/all')
+                .then(res => res.json())
+                .then(data => displayCountries(data));
+        }
+        loadCountries();
+        const displayCountries = countries => {
+            // for (const country of countries) {
+            //     console.log(country);
+            // }
+            //map er arekta rup holo foreach
+            //return na lagle array er upr foreach call kora jae
+            const countriesDiv = document.getElementById('countries');
+            countries.forEach(country => {
+                const h3 = document.createElement('h3');
+                h3.innerText = country.name;
+                countriesDiv.appendChild(h3);
+            })
+        }
+    </script>
+</body>
+
+</html>
