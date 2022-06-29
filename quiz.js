@@ -29,3 +29,6 @@ What is textContent in javascript ?
     ans : p.innertext = "";
 ans: p.innerHTML = "";
 both
+
+//practice from 34.5
+৬. randomuser এর ওয়েবসাইট এ গিয়ে(randomuser.me) এ গিয়ে সেখান থেকে ডাটা লোড করবে। তারপর ইউজারের ছবি দেখাবে। শুধু সেটাও না। ইউজারের location এর মধ্যে যত কিছু আছে। সব দেখাবে ওয়েবসাইট এ। অর্থাৎ street, city, coordinates, timezone যেকোন একভাবে দেখলেই হবে। তবে দেখাতে হবে।
